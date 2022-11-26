@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1 id="free_press">Free Press!</h1>
-      <form>
+      <form className="form" className={styles.form}>
         <label for="fname">Website You Want To Access: </label>
         <input
           type="text"
