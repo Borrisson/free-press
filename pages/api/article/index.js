@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     switch (req.method) {
       case "POST":
         const { data } = await PayWallClient.get(req.body.url);
-        return res.status(200).json(data);
+        return res.status(200).send(data);
       case "GET":
         return res.status(200).end();
       default:

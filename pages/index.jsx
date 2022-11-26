@@ -4,6 +4,8 @@ import axios from "axios";
 
 export default function Home() {
   const [url, setUrl] = useState("");
+  const [html, setHtml] = useState("");
+
   return (
     <>
       <div className={styles.fixedHeader}>
@@ -36,10 +38,20 @@ export default function Home() {
             onChange={(event) => {
               setUrl(event.target.value);
             }}
-            value={value}
+            value={url}
           />
-          <button className={styles.button}>Submit</button>
+          <button
+            className={styles.button}
+            onClick={async (e) => {
+              e.preventDefault();
+              const { data } = await axios.post("/api/article", { url });
+              setHtml(data);
+            }}
+          >
+            Submit
+          </button>
         </form>
+        {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
       </div>
     </>
   );
