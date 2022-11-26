@@ -1,8 +1,9 @@
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Home() {
-  const [value, setValue] = useState("");
+  const [url, setUrl] = useState("");
   return (
     <div className={styles.container}>
       <h1 className={styles.freePress}>Free Press!</h1>
@@ -11,11 +12,19 @@ export default function Home() {
         <input
           type="text"
           onChange={(event) => {
-            setValue(event.target.value);
+            setUrl(event.target.value);
           }}
-          value={value}
+          value={url}
         />
-        <button>Submit</button>
+        <button
+          onClick={async (e) => {
+            e.preventDefault();
+            const { data } = await axios.post("/api/article", { url });
+            console.log(data);
+          }}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
