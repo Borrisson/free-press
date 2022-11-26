@@ -12,13 +12,74 @@
   margin-top: 10%;
 } */
 
+.input{
+  display: flex;
+  margin-left: 667px;
+  margin-top: 10px;
+  
+}
+
+.button{
+  display: flex;
+  margin-left: 667px;
+  margin-top: 10px;
+  
+}
 .form {
   display: flex;
   justify-content: center;
-
+  
 }
 
 .freePress {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
+
+.containerTwo{
+  display: inline-flex;
+  width: 100%;
+  margin: 6px; /* Center the DIV horizontally */
+  justify-content: center;
+
+
+}
+
+.fixedHeader {
+  width: 100%;
+  position: fixed;        
+  background: teal;
+  padding: 10px 0;
+  color: #fff;
+  padding-top: 1px;
+}
+
+.fixedHeader{
+  top: 0;
+}
+
+.nav1 {
+  display: inline-flex;
+  justify-content: left;
+  /* padding-left: 600px; */
+  font-size: large;
+  flex-wrap: wrap;
+  margin: 6px;
+}
+
+.nav2 {
+  display: inline-flex;
+  justify-content: center;
+  font-size: large;
+  flex-wrap: wrap;
+  margin: 6px;
+}
+
+.nav3 {
+  display: inline-flex;
+  justify-content: right;
+  font-size: large;
+  flex-wrap: wrap;
+  margin: 6px;  
+} 
