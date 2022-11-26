@@ -1,8 +1,9 @@
 import styles from "../styles/Home.module.css";
-import React, { useState } from "react";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Home() {
-  const [value, setValue] = useState("");
+  const [url, setUrl] = useState("");
   return (
     <>
       <div className={styles.fixedHeader}>
@@ -33,7 +34,7 @@ export default function Home() {
             className={styles.input}
             type="text"
             onChange={(event) => {
-              setValue(event.target.value);
+              setUrl(event.target.value);
             }}
             value={value}
           />
