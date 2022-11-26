@@ -3,14 +3,18 @@ import { USER_AGENT_DESKTOP, USER_AGENT_MOBILE } from "../constants";
 
 const desktopRegExp = /macintosh|windows|linux/i;
 
-axios.interceptors.request.use((config) => {
-  let interceptedUserAgent = config.headers.common["User-Agent"];
+const PayWallClient = axios.create();
 
-  interceptedUserAgent = desktopRegExp.test(interceptedUserAgent)
-    ? USER_AGENT_DESKTOP
-    : USER_AGENT_MOBILE;
+PayWallClient.interceptors.request.use((config) => {
+  const interceptedUserAgent = config.headers["User-Agent"];
 
+  config.headers = {
+    ...config.headers,
+    "User-Agent": desktopRegExp.test(interceptedUserAgent ?? "windows")
+      ? USER_AGENT_DESKTOP
+      : USER_AGENT_MOBILE,
+  };
   return config;
 });
 
-export default axios;
+export default PayWallClient;
