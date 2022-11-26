@@ -12,13 +12,59 @@
   margin-top: 10%;
 } */
 
+.input{
+  display: flex;
+  margin-left: 667px;
+  margin-top: 10px;
+  
+}
+
 .form {
   display: flex;
   justify-content: center;
-
+  
 }
 
 .freePress {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
+
+.containerTwo{
+  display: flex;
+  width: 80%;
+  margin: 0 auto; /* Center the DIV horizontally */
+  align-items: flex-end;
+}
+
+.fixedHeader {
+  width: 100%;
+  position: fixed;        
+  background: teal;
+  padding: 10px 0;
+  color: #fff;
+  padding-top: 1px;
+}
+
+.fixedHeader{
+  top: 0;
+}
+
+/* .nav1 {
+  display: flex;
+  justify-content: left;
+  font-size: large;
+}
+
+.nav2 {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+
+.nav3 {
+  display: flex;
+  justify-content: right;
+  font-size: large;
+} */
