@@ -5,7 +5,7 @@ export default function Home() {
   const [value, setValue] = useState("");
   return (
     <div className={styles.container}>
-      <h1 className="free_press">Free Press!</h1>
+      <h1 className={styles.freePress}>Free Press!</h1>
       <form className={styles.form}>
         <label for="fname">Website You Want To Access: </label>
         <input
