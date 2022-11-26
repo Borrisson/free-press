@@ -1,11 +1,22 @@
+import styles from "../styles/Home.module.css";
+import { useState } from "react";
+
 export default function Home() {
+  const [value, setValue] = useState("");
   return (
-    <>
+    <div className={styles.container}>
       <h1 id="free_press">Free Press!</h1>
-      <form class="form">
-        <input type="text" id="website_to_be_crawled" />
-        <input type="submit" />
+      <form className="form" className={styles.form}>
+        <label for="fname">Website You Want To Access: </label>
+        <input
+          type="text"
+          onChange={(event) => {
+            setValue(event.target.value);
+          }}
+          value={value}
+        />
+        <button>Submit</button>
       </form>
-    </>
+    </div>
   );
 }
