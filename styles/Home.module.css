@@ -19,6 +19,12 @@
   
 }
 
+.button{
+  display: flex;
+  margin-left: 667px;
+  margin-top: 10px;
+  
+}
 .form {
   display: flex;
   justify-content: center;
@@ -32,10 +38,12 @@
 }
 
 .containerTwo{
-  display: flex;
-  width: 80%;
-  margin: 0 auto; /* Center the DIV horizontally */
-  align-items: flex-end;
+  display: inline-flex;
+  width: 100%;
+  margin: 6px; /* Center the DIV horizontally */
+  justify-content: center;
+
+
 }
 
 .fixedHeader {
@@ -51,20 +59,27 @@
   top: 0;
 }
 
-/* .nav1 {
-  display: flex;
+.nav1 {
+  display: inline-flex;
   justify-content: left;
+  /* padding-left: 600px; */
   font-size: large;
+  flex-wrap: wrap;
+  margin: 6px;
 }
 
 .nav2 {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   font-size: large;
+  flex-wrap: wrap;
+  margin: 6px;
 }
 
 .nav3 {
-  display: flex;
+  display: inline-flex;
   justify-content: right;
   font-size: large;
-} */
+  flex-wrap: wrap;
+  margin: 6px;  
+} 

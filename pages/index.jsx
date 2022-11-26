@@ -37,7 +37,7 @@ export default function Home() {
             }}
             value={value}
           />
-          <button className={styles.input}>Submit</button>
+          <button className={styles.button}>Submit</button>
         </form>
       </div>
     </>
